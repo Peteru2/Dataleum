@@ -7,7 +7,7 @@ const Landing = () => {
                                 <p className="text-7xl font-bold">
                                     Get Access To Data
                                 </p>
-                                <div className="bg-blue-500 text-white py-2 px-4 w-32 text-center mt-4 rounded-md">
+                                <div className="bg-blue-500 text-white  py-4 px-4 w-80 font-bold text-6xl text-center mt-4 rounded-lg">
                                     Buy now
                                 </div>
                         </div>
