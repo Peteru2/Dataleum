@@ -1,5 +1,6 @@
 import "./style.css"
 import access from "./accessSvg.svg"
+import rect from "./Rectangle.png"
 const Landing = () => {
     return ( 
         <>
@@ -16,6 +17,19 @@ const Landing = () => {
                         <div>
                                 <img src={access} alt="svg" />
 
+                        </div>
+                </section>
+                <section className="bg-gray-100 grid grid-cols-2 flex py-14">
+                        <div className="m-auto text-center justify-center">
+                            <h4 className="font-bold text-5xl  text-center ">
+                                WHAT WE DO
+                            </h4>
+                            <div className="bg-blue-400 flex justify-center text-center items-center text-white py-4 px-6 mx-14 mt-4 rounded-md">
+                                Read More
+                            </div>
+                        </div>
+                        <div>
+                            <img src = {rect} alt="rect"/>
                         </div>
                 </section>
             </section>
