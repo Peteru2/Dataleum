@@ -1,17 +1,39 @@
 .accessButton{
     border-radius: 20px;
 }
+.motherPlan{
+    background-color: rgba(0, 0, 255,.1);
+    border-radius: 400px 100px 3px 4px;
+}
 .allPlan{
     display: flex;
     justify-content: center;
     position: relative;
-    background-color: rgba(0, 0, 255,.1);
-    border-radius: 1200px 10px 3px 4px;
+   
     width: 100%;
+    height: 200px;
 }
 .plan{
     position: absolute;
      top: -100px; 
     /* left: 50%;
     transform: translateX(-50%); */
+}
+.bigAbout{
+    width: 700px;
+    position: relative;
+}
+.aboutImg{
+        position: absolute;
+        top: 30px;
+        left: -350px;
+        width: 65%
+
+}
+.aboutDataleum{
+    position: absolute;
+    top: -35px;
+    left: -30px;
+    border-radius:0px 20px 20px;
+    box-shadow:6px 8px 4px 5px rgba(0, 0, 0, 0.10)
 }
