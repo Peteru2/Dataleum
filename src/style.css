@@ -4,6 +4,7 @@
 .motherPlan{
     background-color: rgba(0, 0, 255,.1);
     border-radius: 400px 100px 3px 4px;
+    padding-bottom: 30px;
 }
 .allPlan{
     display: flex;

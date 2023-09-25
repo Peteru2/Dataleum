@@ -2,6 +2,7 @@ import "./style.css"
 import access from "./accessSvg.svg"
 import rect from "./Rectangle.png"
 import Package from "./Package";
+import Why from "./why";
 const Landing = () => {
     return ( 
             <>
@@ -35,6 +36,7 @@ const Landing = () => {
                 </section>
 
                 <Package />
+                <Why />
             </section>
         </>
      );
