@@ -3,9 +3,11 @@ import access from "./accessSvg.svg"
 import rect from "./Rectangle.png"
 import Package from "./Package";
 import Why from "./why";
+import Navbar from "./Navbar";
 const Landing = () => {
     return ( 
             <>
+            <Navbar />
             <section>
                 <section className="grid grid-cols-2 gap-3 mt-20 px-32">
                         <div className="mt-14">
