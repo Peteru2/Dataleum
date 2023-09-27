@@ -9,8 +9,8 @@ const Landing = () => {
             <>
             <Navbar />
             <section>
-                <section className="grid grid-cols-2 gap-3 mt-20 px-32">
-                        <div className="mt-14">
+                <section className="grid grid-cols-2 gap-3 mt-28 px-32">
+                        <div className="mt-32">
                                 <p className="text-7xl font-bold">
                                     Get Access To Data
                                 </p>
