@@ -5,7 +5,7 @@ const Package = () => {
 const [buyMtn, setBuyMtn] = useState(false)
 console.log(buyMtn)
 const handleMtnBuy = () =>{
-    setBuyMtn(true)
+    setBuyMtn(!buyMtn)
 }
     const dataMtnPackage = 
     [
@@ -53,20 +53,24 @@ const handleMtnBuy = () =>{
                                        
 
                                             <button className="bg-blue-500 py-2 px-6 rounded-lg mt-4 font-bold text-white" onClick={handleMtnBuy}>Buy Now</button>
-                                            <div className="flex justify-center">
-                                                    <div className=" justify-center rounded-lg bg-white mtnModal">
-                                                        <div className="ml-auto">
-                                                            <span>x</span>
+                                            <div className={buyMtn?"block ":"hidden "}>
+                                                <div className=" justify-center rounded-lg bg-white">
+                                                    
+                                                    <div className="  mtnModal modal-show">
+                                                    <div className="w-full">
+                                                            <span className="closeButton" onClick={handleMtnBuy}>x</span>
                                                         </div>
-                                                            <p className="text-blue-500">Custom offer</p>
-                                                            <p>MTN</p>
-                                                            <input type = "text" placeholder= "Amount" className="border-2 border-blue-500 rounded-lg mx-4 text-center"/>
-                                                            <p>Total Cost = N300</p>
+                                                            <p className="text-blue-500 mb-3 mt-2">Custom Offer</p>
+                                                            <p className="mb-8">MTN</p>
+                                                            <input type = "text" placeholder= "Amount" className="border-2 border-blue-500 rounded-md mx-4 py-2 text-center"/>
+                                                            <p className="font-bold mb-6">Total Cost = N300</p>
 
-                                                            <button className="bg-blue-500 text-white text-center">Make Payment</button>
+                                                            <button className="bg-blue-500 text-white text-center py-2 px-14 rounded-md">Make Payment</button>
                                                     </div>
+                                            <div id="overlay" class="overlay" onClick={handleMtnBuy}></div>
+
                                             </div>
-                                            <div id="overlay" class="overlay"></div>
+                                            </div>
                                         </div>
 
                                         </div>

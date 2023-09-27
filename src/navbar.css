@@ -5,7 +5,7 @@
     margin-bottom: 200px;
     /* height: 60px; */
     /* justify-content: center; */
-    z-index: 9999;
+    z-index: 1;
     transition: 0.3s ease-in-out;
     position: fixed;
     width: 100%;
