@@ -36,9 +36,11 @@ const Navbar = () => {
                     
                 );
             })}
-            <h2 className="nav-side ">
+            <h2 className="nav-side cursor-pointer">
                 <span>
-                Login
+                 <Link to={"/Dashboard"}>
+                    Login
+                </Link>
                 </span>
                 
               </h2>
