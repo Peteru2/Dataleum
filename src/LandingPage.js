@@ -4,7 +4,36 @@ import rect from "./Rectangle.png"
 import Package from "./Package";
 import Why from "./why";
 import Navbar from "./Navbar";
+import React, { useEffect } from 'react';
+
 const Landing = () => {
+  useEffect(() => {
+    // Select the delayed element by its id or class
+    const delayedElement = document.getElementById('delayed-element');
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // Check if the element is in the viewport
+        if (entry.isIntersecting) {
+            console.log('Element is in the viewport');
+          // Remove the 'hidden' class to make the element visible
+          delayedElement.classList.remove('hidden');
+          // Stop observing once the element is visible (optional)
+          observer.unobserve(delayedElement);
+        }
+      });
+    }, { threshold: 0.1 }); // Adjust the threshold as needed
+
+    // Start observing the element
+    observer.observe(delayedElement);
+
+    // Clean up the observer when the component unmounts
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
     return ( 
             <>
             <Navbar />
@@ -23,8 +52,8 @@ const Landing = () => {
 
                         </div>
                 </section>
-                <section className="bg-gray-100 grid grid-cols-2 flex py-14">
-                        <div className="m-auto text-center justify-center">
+                <section  className=" bg-gray-100 grid grid-cols-2 flex py-14">
+                        <div id="delayed-element" className="m-auto text-center justify-center">
                             <h4 className="font-bold text-5xl  text-center ">
                                 WHAT WE DO
                             </h4>

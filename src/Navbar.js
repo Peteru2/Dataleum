@@ -37,7 +37,7 @@ const Navbar = () => {
                 );
             })}
             <h2 className="nav-side cursor-pointer">
-                <span>
+                <span className=" bg-bro">
                  <Link to={"/Dashboard"}>
                     Login
                 </Link>
