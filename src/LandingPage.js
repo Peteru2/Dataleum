@@ -8,7 +8,6 @@ import React, { useEffect } from 'react';
 
 const Landing = () => {
   useEffect(() => {
-    // Select the delayed element by its id or class
     const delayedElement = document.getElementById('delayed-element');
 
     // Create an Intersection Observer
@@ -53,7 +52,7 @@ const Landing = () => {
                         </div>
                 </section>
                 <section  className=" bg-gray-100 grid grid-cols-2 flex py-14">
-                        <div id="delayed-element" className="m-auto text-center justify-center">
+                        <div id="delayed-element" className="m-auto text-center opacity-1 justify-center">
                             <h4 className="font-bold text-5xl  text-center ">
                                 WHAT WE DO
                             </h4>

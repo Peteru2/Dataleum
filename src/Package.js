@@ -1,5 +1,6 @@
 import About from "./About.png"
 import { useState } from "react";
+import { Fade } from "react-awesome-reveal";
 
 const Package = () => {
 const [buyMtn, setBuyMtn] = useState(false)
@@ -28,6 +29,7 @@ const handleMtnBuy = () =>{
     
     return (  
             <>
+            <Fade>
                 <section>
                     <h5 className="text-6xl text-center my-16">Our Data Package</h5>    
 
@@ -123,7 +125,8 @@ const handleMtnBuy = () =>{
                                     </div>
                         </div>
                     </div>
-                </section>        
+                </section>  
+                </Fade>      
             </>
     );
 }
