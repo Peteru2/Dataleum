@@ -1,6 +1,8 @@
 import About from "./About.png"
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import { Bounce } from "react-awesome-reveal"
+// import fadeIn  from "react-awesome-reveal"
 
 const Package = () => {
 const [buyMtn, setBuyMtn] = useState(false)
@@ -29,7 +31,7 @@ const handleMtnBuy = () =>{
     
     return (  
             <>
-            <Fade>
+            <Fade direction="fadeIn">
                 <section>
                     <h5 className="text-6xl text-center my-16">Our Data Package</h5>    
 
@@ -37,6 +39,7 @@ const handleMtnBuy = () =>{
                         <div className="motherPlan mt-44">
                                     <div className="allPlan">
                                     <div className="grid grid-cols-3 gap-20 plan">
+                                    <Bounce  direction="bounceInRight">
 
                                         <div className="w-44">
                                             <div className="py-4 shadow-lg  border-2 border-blue-400 text-center rounded-lg w-40 mx-6 font-bold">MTN</div>
@@ -77,7 +80,6 @@ const handleMtnBuy = () =>{
 
                                         </div>
 
-
                                         <div className="w-44">
                                             <div className="py-4 shadow-lg  border-2 border-blue-400 text-center rounded-lg w-40 mx-6 font-bold">MTN</div>
                                             
@@ -104,8 +106,10 @@ const handleMtnBuy = () =>{
                                         
                                         
                                         </div>
+                                        </Bounce>
 
                                         </div>
+                                        
                                     </div>
                                     <div className="mt-10 bg-blue-500 bigAbout    text-center  py-20 px-32   ml-auto">
                                             <div className="text-center flex items-center justify-center   ">
