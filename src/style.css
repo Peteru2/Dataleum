@@ -77,7 +77,13 @@
             border-radius: 30px;
             box-shadow: 0px 0px 14px 10px rgba(0, 0, 0, 0.03);
 }
-.allTransaction{
-    /* width: 1200px;
-    max-width: 1200px; */
+.allTransac{
+    width: auto;
+    
+}
+@media (max-width: 900px) {
+    .allTransact{
+        width: 800px;
+        overflow-x: scroll;
+    }
 }

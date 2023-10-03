@@ -48,8 +48,8 @@ const Dashboard = () => {
                          <span className="text-gray-400 font-bold mr-6 text-2xl">Succesful</span>
                          <span  className="text-gray-400 font-bold  text-2xl">Failed</span>
                     </p>
-                    <div className="mt-5 allTransaction  overflow-x-scroll">
-                        <div className="flex justify-between my-2  border-4 items-center p-2 px-4 ">
+                    <div className="mt-5 allTransact  ">
+                        <div className="flex justify-between my-2 overflow-x-scroll border-4 items-center p-2 px-4 ">
                             <div className="w-4 h-4 rounded-full bg-green-300 "></div>
                             <p className="text-xs font-bold">August 8th, 2023 02:45pm</p>
                             <p className="text-xs font-bold text-center">1023785489</p>
