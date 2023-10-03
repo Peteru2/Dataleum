@@ -1,7 +1,8 @@
 import About from "./About.png"
 import { useState } from "react";
-import { Fade } from "react-awesome-reveal";
-import { Bounce } from "react-awesome-reveal"
+
+import { Bounce, Fade } from "react-awesome-reveal"
+// import { Slide } from "react-awesome-reveal"
 // import fadeIn  from "react-awesome-reveal"
 
 const Package = () => {
@@ -31,7 +32,7 @@ const handleMtnBuy = () =>{
     
     return (  
             <>
-            <Fade direction="fadeIn">
+            <Fade triggerOnce direction="left"  >
                 <section>
                     <h5 className="text-6xl text-center my-16">Our Data Package</h5>    
 
@@ -39,7 +40,8 @@ const handleMtnBuy = () =>{
                         <div className="motherPlan mt-44">
                                     <div className="allPlan">
                                     <div className="grid grid-cols-3 gap-20 plan">
-                                    <Bounce  direction="bounceInRight">
+
+                                    <Bounce triggerOnce cascade direction="">
 
                                         <div className="w-44">
                                             <div className="py-4 shadow-lg  border-2 border-blue-400 text-center rounded-lg w-40 mx-6 font-bold">MTN</div>
@@ -58,24 +60,7 @@ const handleMtnBuy = () =>{
                                        
 
                                             <button className="bg-blue-500 py-2 px-6 rounded-lg mt-4 font-bold text-white" onClick={handleMtnBuy}>Buy Now</button>
-                                            <div className={buyMtn?"block ":"hidden "}>
-                                                <div className=" justify-center rounded-lg bg-white">
-                                                    
-                                                    <div className="  mtnModal modal-show">
-                                                    <div className="w-full">
-                                                            <span className="closeButton" onClick={handleMtnBuy}>x</span>
-                                                        </div>
-                                                            <p className="text-blue-500 mb-3 mt-2">Custom Offer</p>
-                                                            <p className="mb-8">MTN</p>
-                                                            <input type = "text" placeholder= "Amount" className="border-2 border-blue-500 rounded-md mx-4 py-2 text-center"/>
-                                                            <p className="font-bold mb-6">Total Cost = N300</p>
-
-                                                            <button className="bg-blue-500 text-white text-center py-2 px-14 rounded-md">Make Payment</button>
-                                                    </div>
-                                            <div id="overlay" class="overlay" onClick={handleMtnBuy}></div>
-
-                                            </div>
-                                            </div>
+                                            
                                         </div>
 
                                         </div>
@@ -106,6 +91,7 @@ const handleMtnBuy = () =>{
                                         
                                         
                                         </div>
+                                        
                                         </Bounce>
 
                                         </div>
@@ -130,7 +116,28 @@ const handleMtnBuy = () =>{
                         </div>
                     </div>
                 </section>  
-                </Fade>      
+                </Fade>  
+                   
+                
+                       
+                                                <div className=" justify-center rounded-lg text-center">
+                                                    
+                                                    <div className={buyMtn ? `mtnModal modal-show`: `mtnModal `}>
+                                                    <div className="w-full">
+                                                            <span className="closeButton" onClick={handleMtnBuy}>x</span>
+                                                        </div>
+                                                            <p className="text-blue-500 mb-3 mt-2">Custom Offer</p>
+                                                            <p className="mb-8">MTN</p>
+                                                            <input type = "text" placeholder= "Amount" className="border-2 border-blue-500 rounded-md mx-4 py-2 text-center"/>
+                                                            <p className="font-bold mb-6">Total Cost = N300</p>
+                                                            <button className="bg-blue-500 text-white text-center py-2 px-14 rounded-md">Make Payment</button>
+                                                    </div>
+                                            </div>
+                                            
+                                           
+                                                    <div id="overlay" class={buyMtn? "overlay" : "hidden"} onClick={handleMtnBuy}></div>
+
+                                          
             </>
     );
 }

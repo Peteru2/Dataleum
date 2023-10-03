@@ -1,10 +1,11 @@
-import "./style.css"
 import access from "./accessSvg.svg"
 import rect from "./Rectangle.png"
 import Package from "./Package";
 import Why from "./why";
 import Navbar from "./Navbar";
 import React, { useEffect } from 'react';
+import { Fade, Zoom } from "react-awesome-reveal";
+import "./style.css"
 
 const Landing = () => {
   useEffect(() => {
@@ -37,7 +38,10 @@ const Landing = () => {
             <>
             <Navbar />
             <section>
+
                 <section className="grid grid-cols-2 gap-3 mt-28 px-32">
+            <Zoom cascade triggerOnce>
+                
                         <div className="mt-32">
                                 <p className="text-7xl font-bold">
                                     Get Access To Data
@@ -50,6 +54,8 @@ const Landing = () => {
                                 <img src={access} alt="svg" />
 
                         </div>
+               
+                </Zoom>
                 </section>
                 <section  className=" bg-gray-100 grid grid-cols-2 flex py-14">
                         <div id="delayed-element" className="m-auto text-center opacity-1 justify-center">
@@ -64,9 +70,11 @@ const Landing = () => {
                             <img src = {rect} alt="rect"/>
                         </div>
                 </section>
-
                 <Package />
+
+          <Fade triggerOnce>
                 <Why />
+              </Fade>
             </section>
         </>
      );
